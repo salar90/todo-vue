@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.41/vue.global.min.js" integrity="sha512-lgbnN1gNswbc8DPmFF2F9n951EGPK0p9PmPkzECHyjC4bmv6Be6ezWQB7mIjPJ5pAdYehSj+Nm0brW0NjCoFmQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="assets/bootstrap-5.2.2-dist/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div id="todo-app">
+        <entries @entries-changed="entriesChanged" :entries="entries" :loading="loading"></entries>
+
+        <div>
+            <button @click="loadFromStorage">Load</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+
+    <script src="Components/Entries.js"></script>
+
+    <script>
+        let mountedTodoApp = todoApp.mount('#todo-app')
+    </script>
+
+</body>
+</html>
