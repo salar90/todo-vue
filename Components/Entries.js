@@ -37,6 +37,7 @@ todoApp.component('entries', {
         </div>
     </div>
     `,
+    emits: ['entriesChanged'],
     methods: {
         add () {
             console.log(this.currentEntries)
@@ -53,7 +54,7 @@ todoApp.component('entries', {
         },
         remove(index){
             this.entries.splice(index, 1)
-            this.$emit('entries-changed', this.currentEntries)
+            this.$emit('entriesChanged', this.currentEntries)
         },
         hadnleInputKeyUp(event)
         {
