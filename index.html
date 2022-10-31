@@ -12,10 +12,6 @@
 <body>
     <div id="todo-app">
         <entries @entries-changed="entriesChanged" :entries="entries" :loading="loading"></entries>
-
-        <div>
-            <button @click="loadFromStorage">Load</button>
-        </div>
     </div>
 
     <script src="app.js"></script>

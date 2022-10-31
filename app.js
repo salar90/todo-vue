@@ -13,7 +13,7 @@ let todoApp = Vue.createApp({
             this.entries = [...entries]
             this.saveToStorage()
         },
-        async loadFromStorage() {
+        loadFromStorage() {
             this.loading = true
             let data = localStorage.getItem('todo-entries');
             let entries = JSON.parse(data)
